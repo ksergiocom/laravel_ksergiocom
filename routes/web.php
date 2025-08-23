@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Tecnologia;
+
 Route::get('/', function () {
-    return view('welcome');
+    $tecnologias = Tecnologia::all();
+    
+    return view('welcome', [
+        'tecnologias' => $tecnologias,
+    ]);
 });
