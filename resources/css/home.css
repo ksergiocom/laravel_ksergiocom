@@ -1,0 +1,28 @@
+.stagger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 3rem);
+    /* columnas fijas de 3rem */
+    gap: 0.5rem;
+    justify-content: center;
+    /* alinear a la izquierda */
+}
+
+/* Tamaño fijo para las imágenes */
+.stagger-grid img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    /* asegura que no se deformen */
+    border-radius: 9999px;
+    /* sigue redondeado */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.stagger-grid img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
