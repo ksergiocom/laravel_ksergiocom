@@ -52,18 +52,8 @@
                         src="{{ Storage::url($tecnologia->imagen) }}" alt="{{ $tecnologia->nombre }}">
                     @endforeach
             </div>
-            <h2 class="text-4xl tracking-tight font-semibold text-gray-100 mt-10 md:mt-18">Pero al final ...</h2>
-            <p class="mt-5 leading-relaxed">
-                La herramienta es  <strong>solo un medio</strong>.
-                Lo que realmente me mueve es el <strong>pensamiento analítico</strong>, la búsqueda de eficiencia y la
-                claridad en el diseño de soluciones.
-                
-            </p>
-            <p class="mt-5 leading-relaxed">Las tecnologías cambian, pero la forma de pensar y la base sólida son lo que marcan <strong>la diferencia</strong>.</p>
-        </section>
-        <hr class="my-18">
-        <section class="pb-20">
-            <p>En construcción...</p>
+            <h3 class="text-3xl tracking-tight font-semibold text-gray-100 mt-10 md:mt-18">Pero al final ...</h3>
+            <h3 class="text-3xl tracking-relaxed font-semibold text-gray-100 mt-10">La forma de pensar y la base sólida son la <span class="uppercase font-extrabold tracking-tighter text-red-500">diferencia</span> real.</h3>
         </section>
     </main>
 
