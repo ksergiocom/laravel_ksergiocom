@@ -10,10 +10,9 @@
     <style>
         .stagger-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+            grid-template-columns: repeat(auto-fill, 3rem); /* columnas fijas de 3rem */
             gap: 0.5rem;
-            justify-items: center;
-            /* centra las imágenes en sus celdas */
+            justify-content: start; /* alinear a la izquierda */
         }
 
         /* Tamaño fijo para las imágenes */
@@ -48,12 +47,10 @@
             <h2 class="text-5xl tracking-tight font-semibold text-gray-100 mb-10 md:mb-18">¿Que es <span class="text-gray-100">para tí</span> ser un <span
                     class="uppercase font-extrabold text-red-500 tracking-tighter">fullstack</span> ?</h2>
             <div class="stagger-grid">
-                @for ($i = 0; $i < 23; $i++)
-                    <!-- @foreach ($tecnologias as $tecnologia) -->
-                    <img style="--i: {{ $i }}" class="h-12 w-12 bg-white rounded-full"
+                    @foreach ($tecnologias as $tecnologia)
+                    <img style="--i: {{ $loop->index }}" class="h-12 w-12 bg-white rounded-full"
                         src="{{ Storage::url($tecnologia->imagen) }}" alt="{{ $tecnologia->nombre }}">
-                    <!-- @endforeach -->
-                @endfor
+                    @endforeach
             </div>
             <h2 class="text-4xl tracking-tight font-semibold text-gray-100 mt-10 md:mt-18">Pero al final ...</h2>
             <p class="mt-5 leading-relaxed">
