@@ -9,12 +9,10 @@
         @include('layout.navbar')
 
         <div class="stagger-grid sm:order-2 order-3 max-w-xl w-full m-auto">
-            @for($i = 0; $i < 10; $i++)
                 @foreach ($tecnologias as $tecnologia)
                     <img style="--i: {{ $loop->index }}" class="h-12 w-12 bg-white rounded-full"
                         src="{{ Storage::url($tecnologia->imagen) }}" alt="{{ $tecnologia->nombre }}">
                 @endforeach
-            @endfor
         </div>
 
         <h1
