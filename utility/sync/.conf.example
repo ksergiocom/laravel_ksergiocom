@@ -1,0 +1,5 @@
+USER="nombre_usuario"
+HOST="1.1.1.1"
+PASSWORD="mi_pass"
+REMOTE_DIR="/ruta/remota/*"
+DB_NAME="nombre_bd"
