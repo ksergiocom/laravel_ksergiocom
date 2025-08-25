@@ -20,4 +20,4 @@ Route::get('/', function () {
 // Route::get('/stack/{nombre}', [TecnologiaController::class,'show'])->name('tecnologia.show');
 
 // Route::get('/posts', [PostController::class, 'index'])->name('post.index');
-// Route::get('/{slug}', [PostController::class, 'show'])->name('post.show');
+Route::get('/{slug}', [PostController::class, 'show'])->name('post.show');

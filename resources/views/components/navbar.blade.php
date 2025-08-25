@@ -3,7 +3,7 @@
         <a class="" href="{{ route('welcome') }}">
             <h3 class="text-lg sm:text-2xl tracking-tighter underline-offset-2 text-black">ksergio<span class="sm:text-lg text-gray-700">.com</span></h3>
         </a>
-        <!-- <ul class="gap-5 hidden sm:flex">
+        {{-- <ul class="gap-5 hidden sm:flex">
             <li>
                 <a class="text-gray-800 hover:text-black hover:underline underline-offset-2" href="{{ route('welcome') }}">Inicio</a>
             </li>
@@ -13,7 +13,7 @@
             <li>
                 <a class="text-gray-800 hover:text-black hover:underline underline-offset-2" href="https://github.com/ksergiocom">Sobre mí</a>
             </li>
-        </ul> -->
+        </ul> --}}
         <h3 class="inline-block">
             <a href="https://github.com/ksergiocom">
                 <img src="{{ asset('images/github-mark.svg') }}" alt="github-logo" class="w-6 h-6 opacity-80 hover:opacity-100">

@@ -8,29 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const h1 = document.querySelector('h1');
     h1.classList.add("translate-x-0", "opacity-100");
 
-    // const speechParagraphs = document.querySelectorAll("#speech p");
+    // Speech section
+    const leftEl = document.getElementById("speech_left");
+    const rightEl = document.getElementById("speech_right");
 
-    // const observer = new IntersectionObserver((entries, observer) => {
-    //     entries.forEach(entry => {
-    //         if (entry.isIntersecting) {
-    //             entry.target.classList.remove("opacity-0", "translate-y-10");
-    //             entry.target.classList.add("opacity-100", "translate-y-0");
+    const speechObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+if (entry.isIntersecting) {
+    entry.target.classList.add("translate-x-0", "opacity-100");
+    observer.unobserve(entry.target);
+}
+                observer.unobserve(entry.target); // Unobserve to animate only once
+            }
+        });
+    }, {
+        threshold: 0.2,
+    });
 
-    //             // Si es el párrafo con id="pero", activar puntos secuenciales
-    //             if (entry.target.id === "pero") {
-    //                 const dots = entry.target.querySelectorAll(".dot");
-    //                 dots.forEach((dot, i) => {
-    //                     setTimeout(() => {
-    //                         dot.classList.remove("opacity-0");
-    //                         dot.classList.add("opacity-100");
-    //                     }, 130 * (i + 1)); // cada 500ms aparece uno
-    //                 });
-    //             }
-
-    //             observer.unobserve(entry.target); // no repetir
-    //         }
-    //     });
-    // }, { threshold: 0.1 });
-
-    // speechParagraphs.forEach(p => observer.observe(p));
+    speechObserver.observe(leftEl);
+    speechObserver.observe(rightEl);
 });

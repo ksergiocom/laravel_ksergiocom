@@ -21,4 +21,12 @@ class Tecnologia extends Model
             Storage::disk('public')->delete($tecnologia->imagen);
         });
     }
+
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class, 'post_tecnologia', 'tecnologia_id', 'post_id')
+            ->withTimestamps();
+    }
+
 }

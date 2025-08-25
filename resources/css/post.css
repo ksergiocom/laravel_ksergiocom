@@ -1,37 +1,74 @@
-.full_post {
-    @apply bg-white max-w-4xl mx-auto p-7 sm:p-10 flex flex-col;
+
+.markdown {
+    @apply rounded-xl sm:p-10 flex flex-col max-w-4xl mx-auto p-5 ;
 }
 
-.full_post h1 {
+.markdown h1 {
     @apply text-4xl sm:text-6xl font-extrabold text-black mb-10 tracking-tight;
 }
 
-.full_post h2 {
-    @apply text-3xl sm:text-4xl font-extrabold mt-12 mb-5 tracking-tighter;
+.markdown h2 {
+    @apply text-3xl sm:text-4xl font-extrabold tracking-tighter mb-5 mt-18;
 }
 
-.full_post pre{
-    @apply overflow-auto p-5 rounded shadow mb-7;
+.markdown p {
+    @apply mb-8;
+}
+
+.markdown pre {
+    @apply overflow-auto p-5 rounded shadow mb-10;
+}
+
+.markdown img {
+    @apply w-full object-cover mb-14 rounded-lg  border border-gray-200;
 }
 
 
-.full_post a {
-    @apply text-red-600 underline underline-offset-2;
+.markdown a {
+    @apply text-red-600 underline underline-offset-2 mb-5;
 }
 
-.full_post a:hover {
+.markdown a:hover {
     @apply text-red-700;
 }
 
-.full_post ul, .full_post ol{
-    @apply list-inside;
+.markdown ul,
+.markdown ol {
+    @apply list-inside mb-10;
+}
+
+/* Listas principales */
+.markdown ul,
+.markdown ol {
+    @apply list-inside space-y-1 tracking-wide font-semibold ;
+}
+
+/* Listas ordenadas */
+.markdown ol {
+    @apply list-decimal;
+}
+
+.markdown ul {
+    @apply list-disc;
+}
+
+/* Sublistas (solo dentro de otra lista) */
+.markdown ul ul,
+.markdown ul ol,
+.markdown ol ul,
+.markdown ol ol {
+    @apply list-inside pl-6 mb-0 font-medium; /* pl-6 agrega indentación escalonada */
+}
+
+/* Si quieres más niveles, puedes hacer algo así: */
+.markdown ul ul ul,
+.markdown ul ul ol,
+.markdown ol ul ul,
+.markdown ol ol ul {
+    @apply pl-12 mb-0 font-medium;
 }
 
 
-.full_post ol{
+.markdown ol {
     @apply tracking-wide list-decimal text-gray-800;
-}
-
-.full_post p{
-    @apply mb-7;
 }
