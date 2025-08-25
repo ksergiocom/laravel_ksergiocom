@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const speechObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-if (entry.isIntersecting) {
-    entry.target.classList.add("translate-x-0", "opacity-100");
-    observer.unobserve(entry.target);
-}
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("translate-x-0", "opacity-100");
+                    observer.unobserve(entry.target);
+                }
                 observer.unobserve(entry.target); // Unobserve to animate only once
             }
         });
@@ -26,6 +26,6 @@ if (entry.isIntersecting) {
         threshold: 0.2,
     });
 
-    speechObserver.observe(leftEl);
-    speechObserver.observe(rightEl);
+    if (leftEl) speechObserver.observe(leftEl);
+    if (rightEl) speechObserver.observe(rightEl);
 });
