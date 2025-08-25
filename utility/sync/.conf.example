@@ -1,5 +1,17 @@
-USER="nombre_usuario"
+# IP servidor
 HOST="1.1.1.1"
-PASSWORD="mi_pass"
-REMOTE_DIR="/ruta/remota/*"
-DB_NAME="nombre_bd"
+
+# Credenciales para SSH y SCP
+SSH_USER="usuario_ssh"
+
+# Que directorio quieres copiar
+DIR_DESTINO="$DIR_SCRIPT/ruta_directorio_local"
+DIR_ORIGEN="/ruta_absoluta_en_el_servidor"
+
+# Credenciales MySQL o MariaDB
+MYSQL_REMOTE_USER="usuario_conexion_mysql_servidor"
+MYSQL_LOCAL_USER="usuario_conexion_mysql_local"
+
+# Nombre de la base de datos a copiar
+DB_ORIGEN="base_de_datos_servidor"
+DB_DESTINO="base_de_datos_local"

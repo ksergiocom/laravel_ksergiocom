@@ -17,6 +17,11 @@
             ?
         </h1>
     </section>
+    <!-- <section class="bg-red-500">
+        @foreach ($posts as $post)
+            {{ $post }}
+        @endforeach
+    </section> -->
 
 
 </x-layout>

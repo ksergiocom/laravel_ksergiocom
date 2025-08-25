@@ -14,7 +14,7 @@
                 <a class="text-gray-800 hover:text-black hover:underline underline-offset-2" href="https://github.com/ksergiocom">Sobre mí</a>
             </li>
         </ul> -->
-        <h3 class="hidden sm:inline-block">
+        <h3 class="inline-block">
             <a href="https://github.com/ksergiocom">
                 <img src="{{ asset('images/github-mark.svg') }}" alt="github-logo" class="w-6 h-6 opacity-80 hover:opacity-100">
             </a>

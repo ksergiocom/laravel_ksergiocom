@@ -17,7 +17,7 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
-Route::get('/stack/{nombre}', [TecnologiaController::class,'show'])->name('tecnologia.show');
+// Route::get('/stack/{nombre}', [TecnologiaController::class,'show'])->name('tecnologia.show');
 
-Route::get('/posts', [PostController::class, 'index'])->name('post.index');
-Route::get('/{slug}', [PostController::class, 'show'])->name('post.show');
+// Route::get('/posts', [PostController::class, 'index'])->name('post.index');
+// Route::get('/{slug}', [PostController::class, 'show'])->name('post.show');
