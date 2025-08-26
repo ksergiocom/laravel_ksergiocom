@@ -1,4 +1,4 @@
-<div class="rounded-xl sm:shadow-xl overflow-hidden sm:border border-b border-gray-200">
+<div class="sm:rounded-xl sm:shadow-xl overflow-hidden sm:border border-t border-b border-gray-200">
     <a href="{{ route('post.show', ['slug' => $post->slug]) }}"><img class="object-cover sm:border-b border-gray-200"
             src="{{ $post->urlPrimeraImagen()}}" alt="{{ $post->titulo }}" /></a>
     <div class="p-5 flex flex-col gap-2">
@@ -21,5 +21,6 @@
         <p class="tracking-tight text-gray-600">{{ $post->descripcion }}</p>
         <a class="inline-block mt-3 hover:text-black tracking-wider hover:underline underline-offset-2"
             href="{{ route('post.show', ['slug' => $post->slug]) }}">Seguir leyendo</a>
+        
     </div>
 </div>
