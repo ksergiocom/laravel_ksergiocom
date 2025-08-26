@@ -10,7 +10,14 @@
         <title>ksergio.com</title>
     @endif
 
+    @if(isset($metaDescription))
+        <meta name="description" content="{{ $metaDescription }}">
+    @else
+        <meta name="description"
+            content="Blog de programación fullstack donde comparto experiencias y proyectos en frontend, backend, DevOps y administración de sistemas. Me apasiona Linux, desarrollo web y software, y compagino trabajo y estudios mientras aprendo y enseño sobre tecnología.">
+    @endif
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body class="h-full w-full">

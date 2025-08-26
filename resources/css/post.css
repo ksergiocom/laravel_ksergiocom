@@ -4,7 +4,7 @@
 }
 
 .markdown h1 {
-    @apply text-4xl sm:text-6xl font-extrabold text-black mb-10 tracking-tight;
+    @apply text-4xl sm:text-6xl font-extrabold text-black my-5 mb-10 tracking-tight;
 }
 
 .markdown h2 {
@@ -75,4 +75,24 @@
 
 .markdown ol {
     @apply tracking-wide list-decimal text-gray-800;
+}
+
+.markdown .portada {
+    @apply mb-10;
+}
+
+.markdown .tecnologias {
+    @apply flex list-none h-fit mb-0;
+}
+
+.markdown .tecnologias li {
+    @apply -ml-4; /* margen izquierdo negativo para solapar */
+}
+
+.markdown .tecnologias li:first-child {
+    @apply ml-0; /* El primero no se solapa hacia la izquierda */
+}
+
+.markdown .tecnologias img {
+    @apply h-10 w-10 m-0 rounded-full shadow-xl border border-gray-300;
 }

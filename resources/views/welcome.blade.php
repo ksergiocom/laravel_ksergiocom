@@ -22,7 +22,7 @@
                     Scroll
                 </p>
 
-                <a href="#voy" class="animate-bounce text-5xl xl:text-7xl mt-2">↓</a>
+                <a href="#speech" class="animate-bounce text-5xl xl:text-7xl mt-2">↓</a>
             </div>
         </section>
 

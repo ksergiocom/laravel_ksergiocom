@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Post extends Model
 {
@@ -11,26 +13,12 @@ class Post extends Model
     protected $fillable = [
         'titulo',
         'slug',
+        'imagen_id',
         'markdown',
         'descripcion',
     ];
 
     // --- Métodos -------------------------------------------------
-
-    // Sacar la primera imagen que haya de mi markdown
-    public function urlPrimeraImagen(): ?string
-    {
-        if (!$this->markdown) {
-            return null;
-        }
-
-        // Buscar la primera imagen en formato markdown
-        if (preg_match('/!\[.*?\]\((.*?)\)/', $this->markdown, $matches)) {
-            return $matches[1]; // la URL de la primera imagen
-        }
-
-        return null;
-    }
 
     // Accessor para "creado hace ..."
     public function getCreadoHaceAttribute()
@@ -46,6 +34,9 @@ class Post extends Model
             ->withTimestamps();
     }
 
-
+    public function imagen(): BelongsTo
+    {
+        return $this->belongsTo(Imagen::class);
+    }
 
 }

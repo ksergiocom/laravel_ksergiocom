@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Imagen extends Model
 {
@@ -26,5 +27,11 @@ class Imagen extends Model
     public function getBaseNameAttribute(): string
     {
         return basename($this->imagen);
+    }
+
+    // --- Relaciones ----------------------------------------------
+    public function posts(): HasMany
+    {
+        return $this->hasMany(Post::class);
     }
 }
