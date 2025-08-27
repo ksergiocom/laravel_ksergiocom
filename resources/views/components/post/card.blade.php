@@ -16,7 +16,7 @@
             <ul class="flex ml-4">
                 @foreach ($post->tecnologias as $tecnologia)
                     <li class="-ml-4">
-                        <img class="h-10 w-10 rounded-full shadow-xl border border-gray-300"
+                        <img class="h-10 w-10 rounded-full shadow-xl border border-gray-300 bg-white"
                             src="{{ Storage::url($tecnologia->imagen) }}" alt="{{ $tecnologia->nombre }}" />
                     </li>
                 @endforeach

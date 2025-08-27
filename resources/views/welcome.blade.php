@@ -39,7 +39,7 @@
             </h2>
         </section>
         <section id="blog" class="snap-start min-h-dvh p-10">
-            <div class="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <div class="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
                 @foreach ($posts as $post)
                     <x-post.card :$post></x-post.card>
                 @endforeach

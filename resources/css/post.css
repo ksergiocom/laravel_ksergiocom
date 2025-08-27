@@ -8,7 +8,7 @@
 }
 
 .markdown h2 {
-    @apply text-3xl sm:text-4xl font-extrabold tracking-tighter mb-5 mt-18;
+    @apply text-3xl sm:text-4xl font-extrabold tracking-tighter mb-7 mt-18 border-b border-gray-200 pb-5;
 }
 
 .markdown h3 {
@@ -94,5 +94,5 @@
 }
 
 .markdown .tecnologias img {
-    @apply h-10 w-10 m-0 rounded-full shadow-xl border border-gray-300;
+    @apply h-10 w-10 m-0 rounded-full shadow-xl border border-gray-300 bg-white;
 }

@@ -7,7 +7,7 @@
                     <ul class="flex tecnologias">
                         @foreach ($post->tecnologias as $tecnologia)
                             <li>
-                                <img class="" src="{{ Storage::url($tecnologia->imagen) }}"
+                                <img class="bg-white" src="{{ Storage::url($tecnologia->imagen) }}"
                                     alt="{{ $tecnologia->nombre }}" />
                             </li>
                         @endforeach
