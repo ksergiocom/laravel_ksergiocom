@@ -28,4 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (leftEl) speechObserver.observe(leftEl);
     if (rightEl) speechObserver.observe(rightEl);
+
+    
 });

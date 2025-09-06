@@ -44,7 +44,7 @@
 /* Listas principales */
 .markdown ul,
 .markdown ol {
-    @apply list-inside space-y-1 tracking-wide font-semibold ;
+    @apply list-inside space-y-1 tracking-wide ;
 }
 
 /* Listas ordenadas */

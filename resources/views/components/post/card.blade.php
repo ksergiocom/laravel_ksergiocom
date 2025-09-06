@@ -1,4 +1,6 @@
-<div class="sm:rounded-xl sm:shadow-xl overflow-hidden sm:border border-t border-b border-gray-200">
+<div     class="sm:rounded-xl sm:shadow-xl overflow-hidden sm:border
+           border-b border-gray-200
+           ">
     <a href="{{ route('post.show', ['slug' => $post->slug]) }}">
         @if($post->imagen)
             <img class="object-cover sm:border-b border-gray-200" src="{{ Storage::url($post->imagen?->imagen) }}"

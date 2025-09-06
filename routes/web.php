@@ -9,7 +9,7 @@ use App\Models\Tecnologia;
 
 Route::get('/', function () {
     $tecnologias = Tecnologia::all();
-    $posts = Post::all();
+    $posts = Post::orderBy('created_at','desc')->get();
     
     return view('welcome', [
         'tecnologias' => $tecnologias,
