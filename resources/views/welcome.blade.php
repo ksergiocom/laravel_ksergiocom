@@ -1,10 +1,10 @@
 <x-layout :hide-navbar="true">
 
-    <main class="snap-y snap-mandatory overflow-y-scroll h-dvh">
+    <main class="h-dvh">
         <section id="hero" class="relative snap-start w-full min-h-dvh flex flex-col sm:justify-between">
             <x-navbar class="-translate-y-32 opacity-0 transition duration-500" />
             <div class="sm:order-2 order-3 max-w-xl w-full mx-auto my-8 sm:my-auto flex flex-col gap-12">
-                <input id="saber_input" class="w-3/4 sm:w-1/2 mx-auto border border-gray-200 p-3 rounded-4xl shadow text-center" placeholder="¿Sobre que quieres saber?" />
+                <x-search-input/>
                 <div class="stagger-grid ">
                     @foreach ($tecnologias as $tecnologia)
                         <img style="--i: {{ $loop->index }}"
@@ -29,7 +29,7 @@
             </div>
         </section>
 
-        <div class="snap-start min-h-dvh">
+        <div class="min-h-dvh">
             <section id="speech" class=" min-h-dvh bg-linear-to-br from-gray-900 to-black text-gray-300 content-center">
                 <div class="max-w-3xl flex flex-col gap-15 p-10 justify-center items-center m-auto h-full">
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -22,5 +23,23 @@ class PostController extends Controller
         return view('posts.show', [
             'post' => $post,
         ]);
+    }
+
+    public function search(Request $request){
+        $query = $request->query('filtro');
+
+        $posts = Post::where(function($q) use ($query) {
+                $q->where('titulo', 'like', "%{$query}%")
+                  ->orWhere('slug', 'like', "%{$query}%")
+                  ->orWhere('imagen_id', 'like', "%{$query}%")
+                  ->orWhere('markdown', 'like', "%{$query}%")
+                  ->orWhere('descripcion', 'like', "%{$query}%");
+            })
+            ->orWhereHas('tecnologias', function($q) use ($query) {
+                $q->where('nombre', 'like', "%{$query}%");
+            })
+            ->get();
+
+        return $posts;
     }
 }
