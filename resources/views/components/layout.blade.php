@@ -21,15 +21,6 @@
 </head>
 
 <body class="h-full w-full">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5ZS4JVRS0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-C5ZS4JVRS0');
-    </script>
     @unless($hideNavbar)
         <x-navbar></x-navbar>
     @endunless
